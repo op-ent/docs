@@ -22,10 +22,12 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  dependencies:
+
+  build:
     environment:
-      name: install_dependencies
+      name: build_website
     runs-on: ubuntu-latest
+    needs: dependencies
     steps:
       - uses: actions/checkout@v3
       - name: Add node v16
@@ -36,14 +38,6 @@ jobs:
         run: corepack enable
       - name: Install Yarn modules
         run: yarn
-
-  build:
-    environment:
-      name: build_website
-    runs-on: ubuntu-latest
-    needs: dependencies
-    steps:
-      - uses: actions/checkout@v3
       - name: Build static website
         run: yarn build
 
