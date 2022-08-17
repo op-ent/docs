@@ -22,6 +22,28 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
+  dependencies:
+    environment:
+      name: install_dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add node v16
+        run: curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+      - name: Install node
+        run: sudo apt update && sudo apt install -y nodejs
+      - name: Enable yarn
+        run: corepack enable
+      - name: Install Yarn modules
+        run: yarn
+
+  build:
+    environment:
+      name: build_website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build static website
+        run: yarn build
+
   deploy:
     environment:
       name: github-pages
@@ -36,7 +58,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
+          path: './build'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
