@@ -8,7 +8,6 @@ const sidebars = require("./sidebars");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Documentation d'op-ent",
-  tagline: "L'ENT open source",
   url: "https://docs.op-ent.fr",
   baseUrl: "/",
   onBrokenLinks: "warn",
