@@ -1,9 +1,10 @@
 // @ts-check
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const presets = require("./presets");
+const plugins = require("./plugins");
+const themeConfig = require("./themeConfig");
 
 /** @type {import('@docusaurus/types').Config} */
-module.exports = {
+const globalConfig = {
   title: "Documentation d'op-ent",
   url: "https://docs.op-ent.fr",
   baseUrl: "/",
@@ -18,120 +19,12 @@ module.exports = {
     locales: ["fr"],
   },
   trailingSlash: true,
-  presets: [
-    [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          path: "docs",
-          routeBasePath: "/",
-          sidebarPath: require.resolve("./sidebars.js"),
-        },
-        blog: false,
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      }),
-    ],
-  ],
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "unstyled-ui",
-        path: "unstyled-ui",
-        routeBasePath: "unstyled-ui",
-        sidebarPath: require.resolve("./unstyledUiSidebars"),
-      },
-    ],
-    async function docusaurusTailwindCss(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          postcssOptions.plugins.push(require("tailwindcss"));
-          postcssOptions.plugins.push(require("autoprefixer"));
-          return postcssOptions;
-        },
-      };
-    },
-  ],
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: "Documentation",
-        logo: {
-          alt: "Logo d'op-ent",
-          src: "img/logo.svg",
-        },
-        items: [
-          {
-            href: "https://github.com/op-ent",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        links: [
-          {
-            title: "Projet",
-            items: [
-              {
-                label: "Blog",
-                href: "https://op-ent.fr/blog",
-              },
-              {
-                label: "Packages",
-                to: "/packages",
-              },
-            ],
-          },
-          {
-            title: "Ressources",
-            items: [
-              {
-                label: "Identité graphique",
-                href: "https://github.com/op-ent/brand",
-              },
-              {
-                label: "Documentation",
-                to: "/",
-              },
-              {
-                label: "Support",
-                href: "https://github.com/op-ent/op-ent/issues",
-              },
-              {
-                label: "Etat des systèmes",
-                href: "https://status.op-ent.fr",
-              },
-            ],
-          },
-          {
-            title: "Communauté",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/op-ent",
-              },
-              {
-                label: "Discord",
-                href: "https://discord.gg/kMFmfSbC2C",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/opent_oss",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright &copy; ${new Date().getFullYear()} op-ent.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+};
+
+/** @type {import('@docusaurus/types').Config} */
+module.exports = {
+  ...globalConfig,
+  presets,
+  plugins,
+  themeConfig,
 };
