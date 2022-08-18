@@ -21,6 +21,7 @@
   --ifm-color-gray-700: #3a4046; /* neutralClassic[700] */
   --ifm-color-gray-800: #20282d; /* neutralClassic[800] */
   --ifm-color-gray-900: #020e17; /* neutralClassic[900] */
+  --ifm-font-family-base: "Space Grotesk", sans-serif;
 }
 
 [data-theme="dark"] {

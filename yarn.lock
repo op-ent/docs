@@ -1594,6 +1594,11 @@
     url-loader "^4.1.1"
     webpack "^5.73.0"
 
+"@fontsource/space-grotesk@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.npmjs.org/@fontsource/space-grotesk/-/space-grotesk-4.5.9.tgz#4a2cbb5f90ccd8cc8684a945b92289bf2fc3768d"
+  integrity sha512-Wu79Teu7BoOMneP4lqVmTdmXkiJF35foJF0FpxTRRHCgVc4HANGf6qHqGs3e28JQe2xFpdXL9h/pk4vyDfuLiw==
+
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
   resolved "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.3.0.tgz"

@@ -17,6 +17,7 @@
     "@docusaurus/core": "2.0.1",
     "@docusaurus/plugin-content-docs": "^2.0.1",
     "@docusaurus/preset-classic": "2.0.1",
+    "@fontsource/space-grotesk": "^4.5.9",
     "@headlessui/react": "^1.6.6",
     "@heroicons/react": "^1.0.6",
     "@mdx-js/react": "^1.6.22",

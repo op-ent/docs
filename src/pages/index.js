@@ -34,7 +34,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
-        <div className="text-red-500">Some text</div>
       </main>
     </Layout>
   );

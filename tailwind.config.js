@@ -67,6 +67,9 @@ module.exports = {
       backgroundColor: {
         "surface-color": "var(--ifm-background-surface-color)",
       },
+      fontFamily: {
+        sans: ["Space Grotesk", "sans-serif"],
+      },
     },
   },
   plugins: [],
