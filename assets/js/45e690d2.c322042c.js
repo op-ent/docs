@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[115],{2967:e=>{e.exports=JSON.parse('{"pluginId":"unstyled-ui","version":"current","label":"Next","banner":null,"badge":false,"className":"docs-version-current","isLast":true,"docsSidebars":{},"docs":{"test":{"id":"test","title":"test","description":"Hello from unstyled-ui"}}}')}}]);
