@@ -1,35 +1,23 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
-const sidebars = require("./sidebars");
 
 /** @type {import('@docusaurus/types').Config} */
-const config = {
+module.exports = {
   title: "Documentation d'op-ent",
   url: "https://docs.op-ent.fr",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "op-ent", // Usually your GitHub org/user name.
-  projectName: "docs", // Usually your repo name.
+  organizationName: "op-ent",
+  projectName: "docs",
   deploymentBranch: "gh-pages",
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "fr",
     locales: ["fr"],
   },
-
   trailingSlash: true,
-
   presets: [
     [
       "classic",
@@ -37,7 +25,7 @@ const config = {
       ({
         docs: {
           path: "docs",
-          routeBasePath: "docs",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
         },
         blog: false,
@@ -57,6 +45,16 @@ const config = {
         sidebarPath: require.resolve("./unstyledUiSidebars"),
       },
     ],
+    async function docusaurusTailwindCss(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
   ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -64,7 +62,7 @@ const config = {
       navbar: {
         title: "op-ent",
         logo: {
-          alt: "Logo de op-ent.",
+          alt: "Logo d'op-ent",
           src: "img/logo.svg",
         },
         items: [
@@ -107,7 +105,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} op-ent, Inc. Built with Docusaurus.`,
+        copyright: `&copy; ${new Date().getFullYear()} op-ent.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -115,5 +113,3 @@ const config = {
       },
     }),
 };
-
-module.exports = config;

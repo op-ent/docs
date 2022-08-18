@@ -1,30 +1,29 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #3e63dd; /* generated on https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima from primaryLight[9] */
+  --ifm-color-primary-dark: #2650d9;
+  --ifm-color-primary-darker: #244bcd;
+  --ifm-color-primary-darkest: #1e3ea8;
+  --ifm-color-primary-light: #5676e1;
+  --ifm-color-primary-lighter: #6280e3;
+  --ifm-color-primary-lightest: #869dea;
+  --ifm-background-color: #fbfcfd; /* neutralLight[0] */
+  --ifm-background-surface-color: #eceef0; /* neutralLight[4] */
+  --ifm-color-gray-100: #d1dae0; /* neutralClassic[100] */
+  --ifm-color-gray-200: #b8c0c5; /* neutralClassic[200] */
+  --ifm-color-gray-300: #9fa7ac; /* neutralClassic[300] */
+  --ifm-color-gray-400: #858d93; /* neutralClassic[400] */
+  --ifm-color-gray-500: #6c747a; /* neutralClassic[500] */
+  --ifm-color-gray-600: #535a60; /* neutralClassic[600] */
+  --ifm-color-gray-700: #3a4046; /* neutralClassic[700] */
+  --ifm-color-gray-800: #20282d; /* neutralClassic[800] */
+  --ifm-color-gray-900: #020e17; /* neutralClassic[900] */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+[data-theme="dark"] {
+  --ifm-background-color: #151718; /* neutralDark[0] */
+  --ifm-background-surface-color: #26292b; /* neutralDark[4] */
 }
