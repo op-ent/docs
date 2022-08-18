@@ -1315,23 +1315,9 @@
     url-loader "^4.1.1"
     webpack "^5.73.0"
 
-"@docusaurus/module-type-aliases@2.0.1":
+"@docusaurus/module-type-aliases@2.0.1", "@docusaurus/module-type-aliases@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npmjs.org/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.1.tgz"
-  integrity sha512-f888ylnxHAM/3T8p1lx08+lTc6/g7AweSRfRuZvrVhHXj3Tz/nTTxaP6gPTGkJK7WLqTagpar/IGP6/74IBbkg==
-  dependencies:
-    "@docusaurus/react-loadable" "5.5.2"
-    "@docusaurus/types" "2.0.1"
-    "@types/history" "^4.7.11"
-    "@types/react" "*"
-    "@types/react-router-config" "*"
-    "@types/react-router-dom" "*"
-    react-helmet-async "*"
-    react-loadable "npm:@docusaurus/react-loadable@5.5.2"
-
-"@docusaurus/module-type-aliases@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/@docusaurus/module-type-aliases/-/module-type-aliases-2.0.1.tgz#44d7132297bedae0890695b0e7ebbe14a73e26d1"
   integrity sha512-f888ylnxHAM/3T8p1lx08+lTc6/g7AweSRfRuZvrVhHXj3Tz/nTTxaP6gPTGkJK7WLqTagpar/IGP6/74IBbkg==
   dependencies:
     "@docusaurus/react-loadable" "5.5.2"
