@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[634],{8893:(e,t,l)=>{l.r(t),l.d(t,{default:()=>s});var n=l(9960),u=l(4182),c=l(7294);const r=["unstyled-ui"];function s(){return c.createElement(u.Z,null,c.createElement("div",null,"Projects"),c.createElement("div",null,r.map((e=>c.createElement(n.Z,{key:e,to:"/"+e},e)))))}}}]);
