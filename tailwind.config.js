@@ -56,7 +56,12 @@ function generateColors() {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./**/*.mdx", "./**/*.md", "./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./**/*.mdx",
+    "./**/*.md",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./docusaurus.config.js",
+  ],
   theme: {
     colors: {
       transparent: "transparent",

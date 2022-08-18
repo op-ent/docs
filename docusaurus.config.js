@@ -9,7 +9,7 @@ module.exports = {
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.svg",
   organizationName: "op-ent",
   projectName: "docs",
   deploymentBranch: "gh-pages",
@@ -60,18 +60,12 @@ module.exports = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "op-ent",
+        title: "Documentation",
         logo: {
           alt: "Logo d'op-ent",
           src: "img/logo.svg",
         },
         items: [
-          {
-            type: "doc",
-            docId: "home",
-            position: "left",
-            label: "Documentation d'op-ent",
-          },
           {
             href: "https://github.com/op-ent",
             label: "GitHub",
@@ -80,7 +74,6 @@ module.exports = {
         ],
       },
       footer: {
-        style: "dark",
         links: [
           {
             title: "Docs",
