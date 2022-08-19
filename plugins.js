@@ -1,29 +1,5 @@
 // @ts-check
-const listRemote = require("./lib/docusaurus-lib-list-remote");
-
-const REPOS = ["op-ent/unstyled-ui/main"].map((value) => {
-  const [owner, name, branch] = value.split("/");
-  const repo = listRemote.createRepo(owner, name, branch);
-  return repo;
-});
-
-const REMOTES = REPOS.map((repo) => {
-  return [
-    "docusaurus-plugin-remote-content",
-    /** @type {import('docusaurus-plugin-remote-content').RemoteContentPluginOptions} */
-    {
-      name: repo.name,
-      sourceBaseUrl: listRemote.buildRepoRawBaseUrl(repo),
-      outDir: `docs/${repo.name}`,
-      documents: listRemote.listDocuments(repo, ["docs/*.md"]),
-      modifyContent(filename, content) {
-        return {
-          filename: filename.replace(/^docs\//, ""),
-        };
-      },
-    },
-  ];
-});
+const { remotes } = require("./lib/generate-remote-content");
 
 module.exports = [
   async function docusaurusTailwindCss(context, options) {
@@ -36,5 +12,5 @@ module.exports = [
       },
     };
   },
-  ...REMOTES,
+  ...remotes,
 ];
