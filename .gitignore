@@ -22,5 +22,5 @@ yarn-error.log*
 /.vscode
 
 # remote content
+docs/*
 !docs/.gitkeep
-docs/**
