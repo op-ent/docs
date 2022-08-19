@@ -1,9 +1,13 @@
 // @ts-check
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const theme = require("./lib/prism-theme");
 
 /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 module.exports = {
+  colorMode: {
+    defaultMode: "light",
+    disableSwitch: false,
+    respectPrefersColorScheme: true,
+  },
   navbar: {
     title: "Documentation",
     logo: {
@@ -81,7 +85,8 @@ module.exports = {
     copyright: `Copyright &copy; ${new Date().getFullYear()} op-ent.`,
   },
   prism: {
-    theme: lightCodeTheme,
-    darkTheme: darkCodeTheme,
+    theme: theme,
+    darkTheme: theme,
+    plugins: ["line-numbers", "show-language"],
   },
 };
